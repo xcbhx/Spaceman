@@ -19,3 +19,5 @@ Spaceship & Earth picture hidden until two legs have disappeared
 Take one body part off at a time starting with one leg
 Hint
 
+global state(remembered throughout the game):
+As the game is being played the letters that has been clicked on are disabled
