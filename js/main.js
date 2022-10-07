@@ -1,5 +1,8 @@
 /*----- constants -----*/
-
+max wrong guesses
+words = [
+    'software eng..'
+]
 
 /*----- app's state (variables) -----*/
 
