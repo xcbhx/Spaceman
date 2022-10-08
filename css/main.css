@@ -1,0 +1,42 @@
+* {
+    box-sizing: border-box;
+}
+
+
+
+
+body {
+    background-size: cover;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100vh;
+}
+h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1, p {
+    color: rgb(249, 249, 249);
+
+}
+
+p {
+    size: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#topLetters, #middleLetters, #bottomLetters {
+    display: flex; 
+    justify-content: end;
+    align-items: center;
+    padding: 1px;
+}
+
+#playAgain {
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+}

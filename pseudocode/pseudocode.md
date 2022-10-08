@@ -1,5 +1,5 @@
 const -->
-Categories: Countries; Jobs; Animals; 
+Category: Jobs
 A - Z  
 
 state variables
