@@ -13,6 +13,7 @@ body {
    /* come back */
 }
 
+
 h1 {
     position: relative;
     display: flex;
@@ -34,17 +35,24 @@ p {
     border: 2px solid black;
 }
 
+#spaceman {
+    width: 300px;   /* width of each "frame" of the image */
+    height: 300px;  /* height of the image */
+    background-image: url(../imgs/spaceman-filmstrip.png);
+    transform: scale(.5);  /* scale the side of the element as desired */
+  }
 
 #letters {
     padding: 10px;
     margin: 4px;
+    border: 1px solid black;
 }
 
 .playAgain {
     /* /* display: flex; 
     justify-content: center; 
     align-items: flex-end; */
-    margin: 180px;
+    /* margin: 180px; */
     border: 1px solid black;
 }
 
