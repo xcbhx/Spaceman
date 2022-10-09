@@ -7,14 +7,13 @@
     <title>Spaceman</title>
     <link rel="stylesheet" href="css/main.css">
     <script defer src="js/main.js"></script>
-    <body background="./img/background3.jpeg"></body>
 </head>
 <body>
     <h1>Spaceman</h1>
     <p>Help the Spaceman continue to discover all the different planets 
         there is to visit in outer space. <br>Every correct letter gets the Spaceman closer to exploring.</p>
-    <main id="board">
-    <section id="topLetters">
+    <div class="container">
+        <section id="letters">
         <button>A</button>
         <button>B</button>
         <button>C</button>
@@ -24,8 +23,7 @@
         <button>G</button>
         <button>H</button>
         <button>I</button>
-    </section>
-    <section id="middleLetters">
+        <br> <br>
         <button>J</button>
         <button>K</button>
         <button>L</button>
@@ -35,8 +33,7 @@
         <button>P</button>
         <button>Q</button>
         <button>R</button>
-    </section>
-    <section id="bottomLetters">
+        <br> <br>
         <button>S</button>
         <button>T</button>
         <button>U</button>
@@ -45,9 +42,10 @@
         <button>X</button>
         <button>Y</button>
         <button>Z</button>
-    </section>
-        <section id="playAgain"><button>PLAY AGAIN!</button></section>
-    </main>
+        </section>
+        <span class="line"></span>
+        <section class="playAgain"><button>PLAY AGAIN</button></section>
+    </div>
 </body>
 
 </html>

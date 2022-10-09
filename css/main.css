@@ -3,17 +3,22 @@
 }
 
 
-
-
 body {
-    background-size: cover;
     font-family: Arial, Helvetica, sans-serif;
     height: 100vh;
+    background-image: url('https://wallpaperaccess.com/full/413655.jpg');
+    /* background-size: cover;
+    background-position: top center;
+    background-color: transparent; */
+   /* come back */
 }
+
 h1 {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
+    border: 2px solid black;
 }
 
 h1, p {
@@ -22,21 +27,42 @@ h1, p {
 }
 
 p {
-    size: 10px;
+    font-size: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
+    border: 2px solid black;
 }
 
-#topLetters, #middleLetters, #bottomLetters {
-    display: flex; 
-    justify-content: end;
-    align-items: center;
-    padding: 1px;
+
+#letters {
+    padding: 10px;
+    margin: 4px;
 }
 
-#playAgain {
-    display: flex; 
+.playAgain {
+    /* /* display: flex; 
     justify-content: center; 
-    align-items: center;
+    align-items: flex-end; */
+    margin: 180px;
+    border: 1px solid black;
 }
+
+/* .playAgain:disabled {
+    background-color: lightgrey;
+    color: darkgrey;
+} */
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: flex-end;
+    /* flex-wrap: wrap; */
+    padding: 10%;
+}
+
+/* .line {
+    border-bottom: 5px dashed rgb(9, 8, 8);
+    display: block;
+} */
