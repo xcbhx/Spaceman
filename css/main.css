@@ -5,26 +5,29 @@
 
 body {
     font-family: Arial, Helvetica, sans-serif;
+    display: grid;
     height: 100vh;
+    /* place-items: center; */
+    /* width: fit-content;
+    block-size: fit-content; */
     background-image: url('https://wallpaperaccess.com/full/413655.jpg');
+    background-repeat: no-repeat;
     /* background-size: cover;
     background-position: top center;
     background-color: transparent; */
    /* come back */
 }
 
-
 h1 {
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 2px solid black;
+    /* border: 2px solid black; */
 }
 
 h1, p {
     color: rgb(249, 249, 249);
-
 }
 
 p {
@@ -32,7 +35,7 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 2px solid black;
+    /* border: 2px solid black; */
 }
 
 #spaceman {
@@ -40,12 +43,53 @@ p {
     height: 300px;  /* height of the image */
     background-image: url(../imgs/spaceman-filmstrip.png);
     transform: scale(.5);  /* scale the side of the element as desired */
+    display: grid;
+    grid-template-columns: repeat(7);
+    grid-column: 2 / 1;
   }
+
+#wordGuess {
+    display: flex;
+    justify-content: space-evenly;
+    color: red;
+    width: 75vw;
+}
+
+#wordGuess > div {
+    font-size: x-large;
+    height: 10vh;
+    border-bottom: 3px solid red;
+    width: 25px;
+}
+
+.mars {
+    height: 80px;
+    width: 80px;
+    background-image: url(img/Mars.gif);
+    display: flex;
+    justify-content: center;
+}
+
+.saturn {
+    height: 80px;
+    width: 80px;
+    background-image: url(img/Saturn.gif);
+    /* display: flex;
+    justify-content: center; */
+}
+
+.Jupiter {
+    height: 80px;
+    width: 80px;
+    background-image: url(img/Jupiter.gif);
+    display: flex;
+    justify-content: center;
+}
 
 #letters {
     padding: 10px;
     margin: 4px;
-    border: 1px solid black;
+    /* border: 1px solid black; */
 }
 
 .playAgain {
@@ -61,7 +105,7 @@ p {
     color: darkgrey;
 } */
 
-.container {
+#board {
     display: flex;
     justify-content: space-around;
     flex-direction: column;
@@ -69,8 +113,18 @@ p {
     /* flex-wrap: wrap; */
     padding: 10%;
 }
+/* #board > button.avail:hover {
+     border-color: grey;
+} */
 
 /* .line {
     border-bottom: 5px dashed rgb(9, 8, 8);
     display: block;
+} */
+
+/* .mars {
+    height: 80px;
+    width: 80px;
+    display: flex;
+    justify-content: center;
 } */
