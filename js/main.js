@@ -68,15 +68,66 @@ function init() {
 }
 
 function render() {
+    renderMessage();
     imageEl.src = `${IMAGES[wrongGuesses.length]}`;
     wordEl.textContent = guess.join('');
 }
 
+function renderMessage() {
+    if (gameStatus === 'W') {
+        messageEl.textContent = `Congrats!`;
+    } else if (gameStatus === 'L') {
+        messageEl.textContent = `Out of Space. The word is ${randomWord.join('')}`;
+    } else {
+        messageEl.textContent = `${maxWrong - wrongGuesses.length + 1} Wrong guesses remain, keep trying!`
+    }
+}
+
+function renderButton() {
+    letterButton.forEach((function(btn) {
+        const ltr = btn.textContent;
+        // if wrongGuesses includes our letter add class name of wrong
+        if (wrongGuesses.includes(ltr)) {
+          btn.className = 'wrong';
+        } else if (guess.includes(ltr)) {
+          btn.className = 'correct';
+        } else {
+          btn.className = '';
+        }
+    }))
+    plyBtn.style.visibility = gameStatus ?  'visible' : 'hidden';
+}
 
 function handleChoice(evt) {
-    if (evt.target.tagName !== 'BUTTON') return;
-    guesses += 1; 
+    const ltr = evt.target.textContent;
+    console.log(ltr);
+    if {
+        gameStatus ||
+        !letterButton.includes(ltr) ||
+        wrongGuesses.includes(ltr) ||
+        guess.includes(ltr)
+    }   return;
+
+    if (randomWord.includes(ltr)) {
+        // correct guess
+        randomWord.forEach(function(char, idx) {
+            if (char === ltr) guess[idx] = ltr;
+        });
+    } else {
+        wrongGuesses.push(ltr);
+    }
+    gameStatus = getGameStatus();
     render();
+    // if (evt.target.tagName !== 'BUTTON') return;
+    // guess += 1; 
+    // render();
+}
+
+function getGameStatus() {
+    if (!guess.includes('_')) return 'W';
+    // if wrongGuesses.length is > maxWrong return 'L'
+    if (wrongGuesses.length > maxWrong) return 'L';
+    return null;
 }
 
 
