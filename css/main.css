@@ -8,14 +8,13 @@ body {
     display: grid;
     height: 100vh;
     /* place-items: center; */
-    /* width: fit-content;
-    block-size: fit-content; */
-    background-image: url('https://wallpaperaccess.com/full/413655.jpg');
-    background-repeat: no-repeat;
-    /* background-size: cover;
-    background-position: top center;
+    width: fit-content;
+    block-size: fit-content;
+    background-image: url('https://gifdb.com/images/high/outer-space-planets-background-d6dsvq0armnh3ajg.gif');
+    /* background-repeat: no-repeat; */
+    background-size: cover;
+    /* background-position: top center;
     background-color: transparent; */
-   /* come back */
 }
 
 h1 {
@@ -26,7 +25,7 @@ h1 {
     /* border: 2px solid black; */
 }
 
-h1, p {
+h1, p, h2 {
     color: rgb(249, 249, 249);
 }
 
@@ -36,6 +35,11 @@ p {
     justify-content: center;
     align-items: center;
     /* border: 2px solid black; */
+}
+h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #spaceman {
@@ -51,14 +55,14 @@ p {
 #wordGuess {
     display: flex;
     justify-content: space-evenly;
-    color: red;
+    color: black;
     width: 75vw;
 }
 
 #wordGuess > div {
-    font-size: x-large;
-    height: 10vh;
-    border-bottom: 3px solid red;
+    font-size: 50%;
+    height: 20vh;
+    border-bottom: 4px solid black;;
     width: 25px;
 }
 
@@ -129,7 +133,7 @@ p {
 } */
 
 .correct {
-    background-color: green;
+    background-color: yellowgreen; 
 }
 
 .wrong {

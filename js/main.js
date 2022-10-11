@@ -2,20 +2,12 @@
 const maxWrong =  6; 
 
 const WORDS = [
-    'Software Engineer',
-    'Funeral Director',
-    'Interior Decorator',
-    'President',
-    'Photographer',
+    'software engineer',
+    'funeral director',
+    'interior decorator',
+    'president',
+    'photographer',
 ];
-
-// const letterBank = [
-//     'A', 'B', 'C', 'D', 'E', 'F', 'G','H', 'I',
-//     'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R',
-//     'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'
-// ]
-
-// const wrongSe = WORDS[0];
 
 
 let IMAGES = [
@@ -43,14 +35,13 @@ const imageEl = document.querySelector('img');
 const wordEl = document.getElementById('wordGuess');
 const messageEl = document.getElementById('message');
 const plyBtn = document.getElementById('playAgain');
-const letterButton = [...document.querySelectorAll('section > button')]
+const letterButton = [...document.querySelectorAll('section > button')];
 
 // const imgPath = `imgs/spaceman-0${wrongGuesses.length}`;
 
 /*----- event listeners -----*/
 document.querySelector('section').addEventListener('click', handleChoice);
 plyBtn.addEventListener('click', init);
-
 
 
 /*----- functions -----*/
@@ -68,9 +59,10 @@ function init() {
 }
 
 function render() {
-    renderMessage();
+    renderMessage()
     imageEl.src = `${IMAGES[wrongGuesses.length]}`;
     wordEl.textContent = guess.join('');
+    renderButton();
 }
 
 function renderMessage() {
@@ -79,12 +71,12 @@ function renderMessage() {
     } else if (gameStatus === 'L') {
         messageEl.textContent = `Out of Space. The word is ${randomWord.join('')}`;
     } else {
-        messageEl.textContent = `${maxWrong - wrongGuesses.length + 1} Wrong guesses remain, keep trying!`
+        messageEl.textContent = `${maxWrong - wrongGuesses.length} Wrong guesses remain, keep trying!`
     }
 }
 
 function renderButton() {
-    letterButton.forEach((function(btn) {
+    letterButton.forEach(function(btn) {
         const ltr = btn.textContent;
         // if wrongGuesses includes our letter add class name of wrong
         if (wrongGuesses.includes(ltr)) {
@@ -94,19 +86,20 @@ function renderButton() {
         } else {
           btn.className = '';
         }
-    }))
+    });
     plyBtn.style.visibility = gameStatus ?  'visible' : 'hidden';
 }
 
 function handleChoice(evt) {
     const ltr = evt.target.textContent;
     console.log(ltr);
-    if {
+    if (
         gameStatus ||
-        !letterButton.includes(ltr) ||
+        //guard to make button  not clickable
+        !letterButton.includes(evt.target) ||
         wrongGuesses.includes(ltr) ||
         guess.includes(ltr)
-    }   return;
+      )  return;
 
     if (randomWord.includes(ltr)) {
         // correct guess
@@ -118,9 +111,6 @@ function handleChoice(evt) {
     }
     gameStatus = getGameStatus();
     render();
-    // if (evt.target.tagName !== 'BUTTON') return;
-    // guess += 1; 
-    // render();
 }
 
 function getGameStatus() {
@@ -132,17 +122,3 @@ function getGameStatus() {
 
 
 
-// const MAX_LETTER = parseInt();
-// const MAX_Wrong = 6; 
-// const secretLetter = Math.floor(Math.random() * MAX_LETTER) + 1;
-
-// let guessLetter;
-// let letterWrong = 0; 
-
-// // while (guessLetter !== secretLetter) {
-//     guessLetter = prompt('One leg has been removed - Keep trying!');
-    // guessLetter = parseInt(guessLetter);
-    // if (guessLetter < secretLetter) {
-    //     console.log('')
-    // }
-// }
