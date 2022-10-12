@@ -13,7 +13,7 @@ const WORDS = [
 ];
 
 
-let IMAGES = [
+const IMAGES = [
     "img/spaceman-filmstrip.png/spaceman-0.jpg",
     "img/spaceman-filmstrip.png/spaceman-1.jpg",
     "img/spaceman-filmstrip.png/spaceman-2.jpg", 
@@ -40,7 +40,6 @@ const messageEl = document.getElementById('message');
 const plyBtn = document.getElementById('playAgain');
 const letterButton = [...document.querySelectorAll('section > button')];
 
-// const imgPath = `imgs/spaceman-0${wrongGuesses.length}`;
 
 /*----- event listeners -----*/
 document.querySelector('section').addEventListener('click', handleChoice);
@@ -70,7 +69,7 @@ function render() {
 
 function renderMessage() {
     if (gameStatus === 'W') {
-        messageEl.textContent = `Congrats!`;
+        messageEl.textContent = `Spaceman is off to Explore!`;
     } else if (gameStatus === 'L') {
         messageEl.textContent = `Out of Space, back to Earth! The word is ${randomWord.join('')}`;
     } else {
@@ -101,7 +100,8 @@ function handleChoice(evt) {
         //guard to make button  not clickable
         !letterButton.includes(evt.target) ||
         wrongGuesses.includes(ltr) ||
-        guess.includes(ltr)
+        guess.includes(ltr) ||
+        wrongGuesses.length === 6
       )  return;
 
     if (randomWord.includes(ltr)) {

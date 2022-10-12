@@ -4,26 +4,24 @@
 
 
 body {
-    font-family: 'Press Start 2P', cursive;
-    /* font-family: Arial, Helvetica, sans-serif; */
-    /* display: grid; */
-    /* height: 100vh; */
-    /* place-items: center; */
+    font-family: 'Press Start 2P', cursive, sans-serif;
+    height: 100%;
     width: fit-content;
     object-fit: contain;
     background-image: url('https://thumbs.gfycat.com/TimelySadDiplodocus-size_restricted.gif');
-    /* background-repeat: no-repeat; */
+    background-repeat: no-repeat;
     background-size: cover;
-    /* background-position: top center;
-    background-color: transparent; */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%
 }
 
 h1 {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* border: 2px solid black; */
+   font-size: 50px;
+   margin: 0;
 }
 
 h1, p, h2 {
@@ -32,15 +30,10 @@ h1, p, h2 {
 
 p {
     font-size: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* border: 2px solid black; */
+    margin: 0;
 }
 h2 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    margin: 0;
 }
 
 #spaceman {
@@ -48,9 +41,6 @@ h2 {
     height: 300px;  /* height of the image */
     background-image: url(../imgs/spaceman-filmstrip.png);
     transform: scale(.5);  /* scale the side of the element as desired */
-    /* display: grid;
-    grid-template-columns: repeat(7);
-    grid-column: 2 / 1; */
   }
 
 #wordGuess {
@@ -63,22 +53,16 @@ h2 {
 
 #wordGuess > div {
     font-size: 60%;
-    height: 30vh;
     border-bottom: 5px solid white;
     width: 50px;
 }
 
 
 #letters {
-    margin: 4%;
-    /* border: 1px solid black; */
+    margin: 0%;
 }
 
 .playAgain {
-    /* /* display: flex; 
-    justify-content: center; 
-    align-items: flex-end; */
-    /* margin: 180px; */
     border: 1px solid white;
 }
 
@@ -86,16 +70,8 @@ h2 {
 #board {
     display: flex;
     justify-content: center;
-    /* flex-direction: column; */
-    /* align-items: ; */
     align-content: flex-start;
-    /* padding: 10%; */
-    padding: 30px;
 }
-/* #board > button.avail:hover {
-     border-color: grey;
-} */
-
 
 .correct {
     background-color: rgb(170, 109, 29); 
@@ -103,8 +79,4 @@ h2 {
 
 .wrong {
     background-color: red;
-}
-
-#box {
-    padding-left: 50px;
 }
