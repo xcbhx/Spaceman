@@ -1,5 +1,5 @@
 /*----- constants -----*/
-const maxWrong =  6; 
+const maxWrong = 6;
 
 const WORDS = [
     'software engineer',
@@ -7,7 +7,7 @@ const WORDS = [
     'interior decorator',
     'president',
     'photographer',
-    'chief',
+    'chef',
     'judge',
     'fireman',
 ];
@@ -16,10 +16,10 @@ const WORDS = [
 const IMAGES = [
     "img/spaceman-filmstrip.png/spaceman-0.jpg",
     "img/spaceman-filmstrip.png/spaceman-1.jpg",
-    "img/spaceman-filmstrip.png/spaceman-2.jpg", 
-    "img/spaceman-filmstrip.png/spaceman-3.jpg", 
-    "img/spaceman-filmstrip.png/spaceman-4.jpg", 
-    "img/spaceman-filmstrip.png/spaceman-5.jpg", 
+    "img/spaceman-filmstrip.png/spaceman-2.jpg",
+    "img/spaceman-filmstrip.png/spaceman-3.jpg",
+    "img/spaceman-filmstrip.png/spaceman-4.jpg",
+    "img/spaceman-filmstrip.png/spaceman-5.jpg",
     "img/spaceman-filmstrip.png/spaceman-6.jpg",
 ];
 
@@ -40,7 +40,6 @@ const messageEl = document.getElementById('message');
 const plyBtn = document.getElementById('playAgain');
 const letterButton = [...document.querySelectorAll('section > button')];
 
-// const imgPath = `imgs/spaceman-0${wrongGuesses.length}`;
 
 /*----- event listeners -----*/
 document.querySelector('section').addEventListener('click', handleChoice);
@@ -48,7 +47,7 @@ plyBtn.addEventListener('click', init);
 
 
 /*----- functions -----*/
-init ();
+init();
 
 
 function init() {
@@ -70,7 +69,7 @@ function render() {
 
 function renderMessage() {
     if (gameStatus === 'W') {
-        messageEl.textContent = `Congrats!`;
+        messageEl.textContent = `Spaceman is off to Explore!`;
     } else if (gameStatus === 'L') {
         messageEl.textContent = `Out of Space, back to Earth! The word is ${randomWord.join('')}`;
     } else {
@@ -79,18 +78,18 @@ function renderMessage() {
 }
 
 function renderButton() {
-    letterButton.forEach(function(btn) {
+    letterButton.forEach(function (btn) {
         const ltr = btn.textContent;
         // if wrongGuesses includes our letter add class name of wrong
         if (wrongGuesses.includes(ltr)) {
-          btn.className = 'wrong';
+            btn.className = 'wrong';
         } else if (guess.includes(ltr)) {
-          btn.className = 'correct';
+            btn.className = 'correct';
         } else {
-          btn.className = '';
+            btn.className = '';
         }
     });
-    plyBtn.style.visibility = gameStatus ?  'visible' : 'hidden';
+    plyBtn.style.visibility = gameStatus ? 'visible' : 'hidden';
 }
 
 function handleChoice(evt) {
@@ -103,11 +102,11 @@ function handleChoice(evt) {
         wrongGuesses.includes(ltr) ||
         guess.includes(ltr) ||
         wrongGuesses.length === 6
-      )  return;
+    ) return;
 
     if (randomWord.includes(ltr)) {
         // correct guess
-        randomWord.forEach(function(char, idx) {
+        randomWord.forEach(function (char, idx) {
             if (char === ltr) guess[idx] = ltr;
         });
     } else {
@@ -123,6 +122,3 @@ function getGameStatus() {
     if (wrongGuesses.length === maxWrong) return 'L';
     return null;
 }
-
-
-

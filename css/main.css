@@ -4,10 +4,8 @@
 
 
 body {
-    font-family:'Press Start 2P', cursive, sans-serif;
-    /* display: grid; */
+    font-family: 'Press Start 2P', cursive, sans-serif;
     height: 100%;
-    /* place-items: center; */
     width: fit-content;
     object-fit: contain;
     background-image: url('https://thumbs.gfycat.com/TimelySadDiplodocus-size_restricted.gif');
@@ -19,38 +17,34 @@ body {
     justify-content: center;
     align-items: center;
     width: 100%;
-    /* background-position: top center;
-    background-color: transparent; */
 }
 
 h1 {
     font-size: 50px;
     margin: 0;
-    /* border: 2px solid black; */
-}
-
-h1, p, h2 {
-    color: rgb(249, 249, 249);
+    color: blue;
 }
 
 p {
     font-size: 20px;
     margin: 0;
+    color: white;
 }
 
 h2 {
+    color: red;
     margin: 0;
 }
 
 #spaceman {
-    width: 300px;   /* width of each "frame" of the image */
-    height: 300px;  /* height of the image */
+    width: 300px;
+    /* width of each "frame" of the image */
+    height: 300px;
+    /* height of the image */
     background-image: url(../imgs/spaceman-filmstrip.png);
-    transform: scale(.5);  /* scale the side of the element as desired */
-    /* display: grid;
-    grid-template-columns: repeat(7);
-    grid-column: 2 / 1; */
-  }
+    transform: scale(.5);
+    /* scale the side of the element as desired */
+}
 
 #wordGuess {
     display: flex;
@@ -60,9 +54,8 @@ h2 {
     font-size: 3em;
 }
 
-#wordGuess > div {
+#wordGuess>div {
     font-size: 60%;
-    /* height: 30vh; */
     border-bottom: 5px solid white;
     width: 50px;
 }
@@ -70,14 +63,9 @@ h2 {
 
 #letters {
     margin: 0%;
-    /* border: 1px solid black; */
 }
 
 .playAgain {
-    /* /* display: flex; 
-    justify-content: center; 
-    align-items: flex-end; */
-    /* margin: 180px; */
     border: 1px solid white;
 }
 
@@ -85,26 +73,13 @@ h2 {
 #board {
     display: flex;
     justify-content: center;
-    /* flex-direction: column; */
-    /* align-items: ; */
     align-content: flex-start;
-    /* padding: 10%; */
-    /* padding: 30px; */
 }
 
-/* #board > button.avail:hover {
-     border-color: grey;
-} */
-
-
 .correct {
-    background-color: rgb(170, 109, 29); 
+    background-color: rgb(170, 109, 29);
 }
 
 .wrong {
     background-color: red;
 }
-
-/* #box {
-    padding-left: 50px;
-} */
