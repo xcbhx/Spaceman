@@ -119,7 +119,7 @@ function handleChoice(evt) {
 function getGameStatus() {
     if (!guess.includes('_')) return 'W';
     // if wrongGuesses.length is > maxWrong return 'L'
-    if (wrongGuesses.length > maxWrong) return 'L';
+    if (wrongGuesses.length === maxWrong) return 'L';
     return null;
 }
 

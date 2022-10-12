@@ -16,23 +16,23 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100%
+    width: 100%;
 }
 
 h1 {
    font-size: 50px;
    margin: 0;
-}
-
-h1, p, h2 {
-    color: rgb(249, 249, 249);
+   color: blue;
 }
 
 p {
     font-size: 20px;
     margin: 0;
+    color: white;
 }
+
 h2 {
+    color: red;
     margin: 0;
 }
 
@@ -80,3 +80,4 @@ h2 {
 .wrong {
     background-color: red;
 }
+
