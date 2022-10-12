@@ -4,13 +4,14 @@
 
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    display: grid;
-    height: 100vh;
+    font-family: 'Press Start 2P', cursive;
+    /* font-family: Arial, Helvetica, sans-serif; */
+    /* display: grid; */
+    /* height: 100vh; */
     /* place-items: center; */
     width: fit-content;
-    block-size: fit-content;
-    background-image: url('https://gifdb.com/images/high/outer-space-planets-background-d6dsvq0armnh3ajg.gif');
+    object-fit: contain;
+    background-image: url('https://thumbs.gfycat.com/TimelySadDiplodocus-size_restricted.gif');
     /* background-repeat: no-repeat; */
     background-size: cover;
     /* background-position: top center;
@@ -47,48 +48,26 @@ h2 {
     height: 300px;  /* height of the image */
     background-image: url(../imgs/spaceman-filmstrip.png);
     transform: scale(.5);  /* scale the side of the element as desired */
-    display: grid;
+    /* display: grid;
     grid-template-columns: repeat(7);
-    grid-column: 2 / 1;
+    grid-column: 2 / 1; */
   }
 
 #wordGuess {
     display: flex;
     justify-content: space-evenly;
-    color: black;
+    color: white;
     width: 75vw;
+    font-size: 3em;
 }
 
 #wordGuess > div {
-    font-size: 50%;
-    height: 20vh;
-    border-bottom: 4px solid black;;
-    width: 25px;
+    font-size: 60%;
+    height: 30vh;
+    border-bottom: 5px solid white;
+    width: 50px;
 }
 
-.mars {
-    height: 80px;
-    width: 80px;
-    background-image: url(img/Mars.gif);
-    display: flex;
-    justify-content: center;
-}
-
-.saturn {
-    height: 80px;
-    width: 80px;
-    background-image: url(img/Saturn.gif);
-    /* display: flex;
-    justify-content: center; */
-}
-
-.Jupiter {
-    height: 80px;
-    width: 80px;
-    background-image: url(img/Jupiter.gif);
-    display: flex;
-    justify-content: center;
-}
 
 #letters {
     margin: 4%;
@@ -100,42 +79,32 @@ h2 {
     justify-content: center; 
     align-items: flex-end; */
     /* margin: 180px; */
-    border: 1px solid black;
+    border: 1px solid white;
 }
 
-/* .playAgain:disabled {
-    background-color: lightgrey;
-    color: darkgrey;
-} */
 
 #board {
     display: flex;
     justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    /* flex-wrap: column wrap; */
+    /* flex-direction: column; */
+    /* align-items: ; */
+    align-content: flex-start;
     /* padding: 10%; */
+    padding: 30px;
 }
 /* #board > button.avail:hover {
      border-color: grey;
 } */
 
-/* .line {
-    border-bottom: 5px dashed rgb(9, 8, 8);
-    display: block;
-} */
-
-/* .mars {
-    height: 80px;
-    width: 80px;
-    display: flex;
-    justify-content: center;
-} */
 
 .correct {
-    background-color: yellowgreen; 
+    background-color: rgb(170, 109, 29); 
 }
 
 .wrong {
     background-color: red;
+}
+
+#box {
+    padding-left: 50px;
 }

@@ -7,6 +7,9 @@ const WORDS = [
     'interior decorator',
     'president',
     'photographer',
+    'chief',
+    'judge',
+    'fireman',
 ];
 
 
@@ -69,7 +72,7 @@ function renderMessage() {
     if (gameStatus === 'W') {
         messageEl.textContent = `Congrats!`;
     } else if (gameStatus === 'L') {
-        messageEl.textContent = `Out of Space. The word is ${randomWord.join('')}`;
+        messageEl.textContent = `Out of Space, back to Earth! The word is ${randomWord.join('')}`;
     } else {
         messageEl.textContent = `${maxWrong - wrongGuesses.length} Wrong guesses remain, keep trying!`
     }
