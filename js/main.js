@@ -13,7 +13,7 @@ const WORDS = [
 ];
 
 
-let IMAGES = [
+const IMAGES = [
     "img/spaceman-filmstrip.png/spaceman-0.jpg",
     "img/spaceman-filmstrip.png/spaceman-1.jpg",
     "img/spaceman-filmstrip.png/spaceman-2.jpg", 
@@ -101,7 +101,8 @@ function handleChoice(evt) {
         //guard to make button  not clickable
         !letterButton.includes(evt.target) ||
         wrongGuesses.includes(ltr) ||
-        guess.includes(ltr)
+        guess.includes(ltr) ||
+        wrongGuesses.length === 6
       )  return;
 
     if (randomWord.includes(ltr)) {
@@ -119,7 +120,7 @@ function handleChoice(evt) {
 function getGameStatus() {
     if (!guess.includes('_')) return 'W';
     // if wrongGuesses.length is > maxWrong return 'L'
-    if (wrongGuesses.length > maxWrong) return 'L';
+    if (wrongGuesses.length === maxWrong) return 'L';
     return null;
 }
 
