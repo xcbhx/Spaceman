@@ -54,7 +54,6 @@ function init() {
     wrongGuesses = [];
     let rndIdx = Math.floor(Math.random() * WORDS.length)
     randomWord = WORDS[rndIdx].toUpperCase().split('');
-    // console.log(randomWord);
     guess = randomWord.map(ltr => ltr === ' ' ? ' ' : '_');
     gameStatus = null;
     render(); //invoke render 
@@ -94,7 +93,6 @@ function renderButton() {
 
 function handleChoice(evt) {
     const ltr = evt.target.textContent;
-    console.log(ltr);
     if (
         gameStatus ||
         //guard to make button  not clickable

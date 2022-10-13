@@ -43,7 +43,6 @@ h2 {
     /* height of the image */
     background-image: url(../imgs/spaceman-filmstrip.png);
     transform: scale(.5);
-    /* scale the side of the element as desired */
 }
 
 #wordGuess {
