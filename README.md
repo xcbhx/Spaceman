@@ -10,7 +10,7 @@
 #### Once the player have guessed the correct word, the Spaceman is off the explore.
 ![Image of Spaceman win](img/Spacemancorrect.png)
 
-### If the player fails, the Spaceman is out of space and back to earth.
+#### If the player fails, the Spaceman is out of space and back to earth.
 ![Image of Spaceman win](img/spacemanwrong.png)
 
 ## **Technologies Used:** <br>
