@@ -25,15 +25,12 @@ const IMAGES = [
 
 /*----- app's state (variables) -----*/
 let randomWord; // array of 3 (horizontal) row 
-// let turn,
 let gameStatus; // null = no winner; W = win; L = lose
 let guess;
 let wrongGuesses;
 
 
 /*----- cached element references -----*/
-// const playAgainBtn = document.querySelector('button');
-// const boardLetters = [...document.querySelctorAll('#board > button')];
 const imageEl = document.querySelector('img');
 const wordEl = document.getElementById('wordGuess');
 const messageEl = document.getElementById('message');
