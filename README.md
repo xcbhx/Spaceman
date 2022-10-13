@@ -3,6 +3,7 @@
 ## *This Spaceman version of the game is set in outer space. Players help Spaceman discover new planets by guessing the correct letters for each word.* 
 <br>
 
+## Screenshots:
 #### The player who chooses to help Spaceman on his journey is given six wrong guesses to help him get closer to his next planet.
 ![Image of Spaceman](img/SpacemanScreenshot.png)
 

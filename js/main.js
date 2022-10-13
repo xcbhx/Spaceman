@@ -56,7 +56,7 @@ function init() {
     randomWord = WORDS[rndIdx].toUpperCase().split('');
     guess = randomWord.map(ltr => ltr === ' ' ? ' ' : '_');
     gameStatus = null;
-    render(); //invoke render 
+    render(); 
 }
 
 function render() {
@@ -116,7 +116,6 @@ function handleChoice(evt) {
 
 function getGameStatus() {
     if (!guess.includes('_')) return 'W';
-    // if wrongGuesses.length is > maxWrong return 'L'
     if (wrongGuesses.length === maxWrong) return 'L';
     return null;
 }
