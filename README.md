@@ -26,4 +26,4 @@ CSS
 <li>One of my future enhancements would be adding categories so players can select from a list of different categories.</li> 
 <li>The second enhancement would be to add audio, so it can play while the users are interacting with the page.</li>
 <li>The third enhancement would be to add a gif of spaceman on a rocketship when the game has been won.</li>
-</ul> 
+</ul>
