@@ -1,4 +1,4 @@
-# Spaceman
+<h1 align="center"> Spaceman </h1>
 
 ## *This Spaceman version of the game is set in outer space. Players help Spaceman discover new planets by guessing the correct letters for each word.* 
 <br>
@@ -14,13 +14,13 @@
 ![Image of Spaceman win](img/spacemanwrong.png)
 
 ## **Technologies Used:** <br>
-HTML <br>
-JavaScript<br>
-CSS
+![HTML](https://img.shields.io/badge/HTML-239120?style=for-the-badge&logo=html5&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![CSS](https://img.shields.io/badge/CSS-239120?&style=for-the-badge&logo=css3&logoColor=white)
+
 
 ## **Getting Started:** <br>
-*Click on the link below to play!* <br>
-(https://xcbhx.github.io/Spaceman/)
+<a href="https://xcbhx.github.io/Spaceman/">Deployed Link</a>
 
 ## **Next Steps:** <br>
 <ul>
